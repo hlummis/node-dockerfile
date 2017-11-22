@@ -65,7 +65,7 @@ export class Builder {
 
   arg(key: string, value?: string) {
     this.instructions
-      .push(makeInstruction("ARG", value ? `${key}=${value}` : ''))
+      .push(makeInstruction("ARG", `${key}${value ? `=${value}` : ''}`))
     return this
   }
 
